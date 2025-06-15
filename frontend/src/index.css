@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 47.4 80.9% 52.2%;
+    --primary-foreground: 26 83.3% 14.1%;
+
+    --secondary: 60 33% 96.1%;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 35.5 91.7% 32.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .gold-shimmer {
+    @apply bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-[length:200%_100%] animate-shimmer;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-white hover:bg-gold-dark transition-colors duration-300 font-medium;
+  }
+
+  .section-title {
+    @apply font-playfair text-3xl md:text-4xl font-bold mb-6 text-center;
+  }
+}
